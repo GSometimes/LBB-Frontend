@@ -90,3 +90,17 @@ Time frames are also key in the development cycle.  You have limited time to cod
  - CSS Styled Components
 
 ## Code Snippet
+
+```
+  const handleClick = (color, route) => {
+    console.log("circle clicked", color);
+    activeCircle.current = color;
+    setTransition(!transition);
+    setTimeout(() => {
+      color === "black"
+        ? props.history.push("/")
+        : props.history.push(`/${route}`);
+    }, 1000);
+  };
+
+```
